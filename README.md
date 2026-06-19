@@ -128,4 +128,4 @@ Sharon Rose M
 
 Computer Science Student
 
-Built as a learning project to strengthen web development skills and gain hands-on experience with JavaScript.
+Built as a learning project to strengthen web development skills and gain hands-on experience.
