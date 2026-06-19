@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Study Planner Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form onsubmit="loginUser(event)">
+
+    <h2>Login</h2>
+
+    <input
+        type="email"
+        id="email"
+        placeholder="Enter Email"
+        required>
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Enter Password"
+        required>
+
+    <button type="submit">
+        Login
+    </button>
+
+    <br><br>
+
+    <p>
+        Don't have an account?
+        <a href="register.html">
+            Register Here
+        </a>
+    </p>
+
+</form>
+
+<script>
+
+function loginUser(event)
+{
+    event.preventDefault();
+
+    const enteredEmail =
+        document.getElementById("email").value;
+
+    const enteredPassword =
+        document.getElementById("password").value;
+
+    const savedEmail =
+        localStorage.getItem("email");
+
+    const savedPassword =
+        localStorage.getItem("password");
+
+    if(
+        enteredEmail === savedEmail &&
+        enteredPassword === savedPassword
+    )
+    {
+        localStorage.setItem(
+            "loggedIn",
+            "true"
+        );
+
+        alert("Login Successful!");
+
+        window.location.href =
+            "index.html";
+    }
+    else
+    {
+        alert(
+            "Invalid Email or Password!"
+        );
+    }
+}
+
+</script>
+
+</body>
+</html>

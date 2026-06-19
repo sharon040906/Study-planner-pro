@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+
+if(localStorage.getItem("loggedIn") !== "true")
+{
+    window.location.href = "login.html";
+}
+
+</script>
+
+<div class="container">
+
+    <header>
+
+        <h1>Study Planner Pro</h1>
+
+        <p>
+            Organize tasks, manage deadlines and stay productive.
+        </p>
+
+        <h3 id="welcomeUser"></h3>
+
+        <button class="logout-btn" onclick="logout()">
+    Logout
+</button>
+
+    </header>
+
+    <section class="card">
+
+        <h2>Create a Task</h2>
+
+        <label for="task">
+            Task Name
+        </label>
+
+        <input
+            type="text"
+            id="task"
+            placeholder="Enter task name">
+
+        <label for="category">
+            Category
+        </label>
+
+        <select id="category">
+
+            <option value="college">
+                College
+            </option>
+
+            <option value="dsa">
+                DSA
+            </option>
+
+            <option value="gate">
+                GATE
+            </option>
+
+            <option value="skills">
+                Skills
+            </option>
+
+            <option value="projects">
+                Projects
+            </option>
+
+        </select>
+
+        <label for="deadline">
+            Deadline
+        </label>
+
+        <input
+            type="date"
+            id="deadline">
+
+        <button onclick="addTask()">
+            Add Task
+        </button>
+
+        <h3>
+            Add Custom Category
+        </h3>
+
+        <input
+            type="text"
+            id="newCategory"
+            placeholder="Enter category name">
+
+        <button onclick="addCategory()">
+            Add Category
+        </button>
+
+    </section>
+
+    <section class="card">
+
+        <h2>
+            Pending Tasks
+        </h2>
+
+        <ul id="taskList">
+
+        </ul>
+
+    </section>
+
+    <section class="card">
+
+        <h2>
+            Completed Tasks
+        </h2>
+
+        <ul id="completedTaskList">
+
+        </ul>
+
+    </section>
+
+    <section class="card">
+
+        <h2>
+            Progress
+        </h2>
+
+        <h4 id="completedTasks">
+            Tasks Completed: 0 / 0
+        </h4>
+
+        <h4 id="completionRate">
+            Completion Rate: 0%
+        </h4>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

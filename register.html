@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Study Planner Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form onsubmit="registerUser(event)">
+
+    <h2>Create Account</h2>
+
+    <input
+        type="text"
+        id="name"
+        placeholder="Enter Name"
+        required>
+
+    <input
+        type="email"
+        id="email"
+        placeholder="Enter Email"
+        required>
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Create Password"
+        required>
+
+    <button type="submit">
+        Register
+    </button>
+
+    <br><br>
+
+    <p>
+        Already have an account?
+        <a href="login.html">
+            Login Here
+        </a>
+    </p>
+
+</form>
+
+<script>
+
+function registerUser(event)
+{
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    const email =
+        document.getElementById("email").value;
+
+    const password =
+        document.getElementById("password").value;
+
+    localStorage.setItem(
+        "name",
+        name
+    );
+
+    localStorage.setItem(
+        "email",
+        email
+    );
+
+    localStorage.setItem(
+        "password",
+        password
+    );
+
+    alert(
+        "Registration Successful!"
+    );
+
+    window.location.href =
+        "login.html";
+}
+
+</script>
+
+</body>
+</html>
