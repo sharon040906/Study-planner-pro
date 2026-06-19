@@ -87,13 +87,18 @@ Through this project, I practiced:
 
 ## 📸 Screenshots
 1. Registration Page
-
-
-
+![Register Page](screenshots/Register.png)
 2. Login Page
+![Login Page](screenshots/login.png)
+![Login Page](screenshots/login-ok.png)
 3. Dashboard
-4. Task Creation
-5. Progress Tracking
+![Dashboard](screenshots/home.png)
+4.Category
+![Add Category](screenshots/Category-add.png)
+5. Task Creation
+![Task](screenshots/tasks.png)
+6. Progress Tracking
+![Progress](screenshots/progress.png)
 
 ---
 
